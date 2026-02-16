@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --bg-color: #FFFDF2;
+  --txt-color: #2D3436;
+  --nav-color: #2C3E50;
+  --sec-color: #E5CDC8;
+  --text-box-before: #979797;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+
+    background-color: var(--bg-color);
+}
+
+.kotak-tengah {
+    padding: 20px;
+    background-color: var(--sec-color);
+}
+
+.regist-button-area {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form-text {
+    position: relative;
+    font-family: "Outfit", sans-serif;
+    font-size: 25px;
+    color: var(--txt-color);
+    display: flex;
+    align-items: center;
+    margin: 25px 10px;
+}
+
+.gender-form {
+    position: relative;
+    font-family: "Outfit", sans-serif;
+    font-size: 25px;
+    color: var(--txt-color);
+    display: flex;
+    align-items: center;
+    margin: 25px 10px;
+}
+
+.gender-form i {
+    position: relative;
+    left: 15px;
+    font-size: 24px; 
+}
+
+.gender {
+    position: relative;
+    left:20px; 
+    font-size: 16px;
+
+}
+
+.gender-option {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.list-gender {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--txt-color);
+
+    display: flex;
+    position: relative;
+    margin-left: 5px;
+}
+
+.list{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 10px;
+}
+
+.form-text i {
+    position: absolute;
+    left: 15px;
+    font-size: 24px; 
+}
+
+#eye-open {
+    left: 200px;
+}
+
+.opening {
+    font-family: "Mansalva", sans-serif;
+    font-weight: 400;
+    color: var(--txt-color);
+    font-size: 50px;
+    
+}
+
+
+.title {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.text-box {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    background: transparent; /* background tidak menutupi label */
+    padding: 0 20px 0 50px; /* Padding kiri agar tidak nabrak Icon */
+    border: 2px solid var(--text-box-before);
+    border-radius: 20px;
+    outline: none;
+}
+
+.text-box:focus, .text-box:valid {
+    border-color: var(--nav-color);
+    transition: 0.3s ease;
+}
+
+.text-box:focus ~ label,
+.text-box:valid ~ label {
+    top: 0;
+    left: 45px; 
+    font-size: 14px; 
+    color: var(--nav-color);
+    z-index: 10; /*diatas border*/
+}
+
+
+
+.form-text label {
+    position: absolute;
+    left: 50px; 
+    top: 50%;
+    transform: translateY(-50%); /*ditengah vertikal*/
+    padding: 0 5px;
+    background-color: var(--sec-color); 
+    transition: 0.3s ease; 
+    pointer-events: none; /*kalau label diklik, tembus ke input */
+    color: var(--txt-color);
+    font-size: 16px;
+}
+
+
