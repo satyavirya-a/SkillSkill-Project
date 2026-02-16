@@ -25,20 +25,26 @@ body {
     background-color: var(--bg-color);
 }
 
+.opening {
+    font-family: "Mansalva", sans-serif;
+    font-weight: 400;
+    color: var(--txt-color);
+    font-size: 50px;
+    
+}
+
+
 .title {
     font-family: "Outfit", sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .kotak-tengah {
     padding: 20px 50px;
     background-color: var(--sec-color);
     border-radius: 20px;
-}
-
-.regist-button-area {
-    display: flex;
-    justify-content: center;
-    
 }
 
 .form-text {
@@ -102,29 +108,27 @@ body {
     margin-left: 10px;
 }
 
+/* khusus buat date of birth */
+.text-box[type="date"] {
+    color: transparent;
+}
+
+
+
+.text-box[type="date"]:focus,
+.text-box[type="date"]:valid {
+    color: var(--txt-color);
+}
+
+.text-box[type="date"]:focus::-webkit-calendar-picker-indicator,
+.text-box[type="date"]:valid::-webkit-calendar-picker-indicator {
+    opacity: 1;
+}
+
 .form-text i {
     position: absolute;
     left: 15px;
     font-size: 24px; 
-}
-
-#eye-open {
-    left: 200px;
-}
-
-.opening {
-    font-family: "Mansalva", sans-serif;
-    font-weight: 400;
-    color: var(--txt-color);
-    font-size: 50px;
-    
-}
-
-
-.title {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
 }
 
 
@@ -168,28 +172,27 @@ body {
     font-size: 16px;
 }
 
+
+/* Untuk Logo Matanya */
+#eye-icon {
+    position: absolute;
+    left: 85%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.text-box:focus ~ #eye-icon,
+.text-box:valid ~ #eye-icon {
+    opacity: 1;
+}
+
+
 .regist-button {
     width: 100%;
     height: 55px;
     border-radius: 20px;
 }
 
-/* Hide date text until focused/filled so label stays centered */
-.text-box[type="date"] {
-    color: transparent;
-}
-
-
-
-.text-box[type="date"]:focus,
-.text-box[type="date"]:valid {
-    color: var(--txt-color);
-}
-
-.text-box[type="date"]:focus::-webkit-calendar-picker-indicator,
-.text-box[type="date"]:valid::-webkit-calendar-picker-indicator {
-    opacity: 1;
-}
 
 .regist-button:hover {
     background-color: #2C3E50;
