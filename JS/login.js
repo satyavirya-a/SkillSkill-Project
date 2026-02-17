@@ -15,3 +15,13 @@ eyeIcon.onclick = function() {
         eyeIcon.classList.add("bx-eye");
     }
 }
+
+
+// buat fungsi buat pengawas ketika event pageshow
+window.addEventListener('pageshow', function(event) {
+    //event persisted contohnya ketika klik back
+  if (event.persisted) {
+    //halaman di reload ulang agar css/js tidak rusak
+    window.location.reload();
+  }
+});
