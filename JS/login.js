@@ -1,6 +1,24 @@
 
+// Untuk milih gender
+function radioValidadion() {
+    var gender = document.getElementsByName("gender");
+    var genValue = false;
+
+    for (var i =0; i < gender.length; i++) {
+        if (gender[i].ariaChecked == true) {
+            genValue = true;
+        }
+    }
+
+    if (!genValue) {
+        alert("Please choose gender");
+        return false;
+    }
+}
 
 
+
+// Untuk Icon Mata Password
 let eyeIcon = document.getElementById("eye-icon");
 let passwordInput = document.getElementById("pass");
 
@@ -25,3 +43,4 @@ window.addEventListener('pageshow', function(event) {
     window.location.reload();
   }
 });
+

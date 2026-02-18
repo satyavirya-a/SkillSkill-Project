@@ -23,6 +23,8 @@ body {
     padding: 100px;
 
     background-color: var(--bg-color);
+
+    transition: ease 0.3s;
 }
 
 .opening {
@@ -42,8 +44,9 @@ body {
 }
 
 .kotak-tengah {
-    padding: 20px 50px;
     background-color: var(--sec-color);
+
+    padding: 20px 50px;
     border-radius: 20px;
 }
 
