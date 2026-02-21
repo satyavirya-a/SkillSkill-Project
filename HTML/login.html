@@ -18,17 +18,18 @@
 </head>
 <body>
     <div class="opening">VisualSkill</div>
-
-    <section class="kotak-tengah">
-        <div>  
+    <section>
+        <div class="kotak-tengah" style="position: relative; z-index: 1;">
+            <div class="pict-container">
+                <img src="../Assets/atom.gif" alt="atom" id="atom-gif" />
+            </div>
+    
             <div class="title">Register</div>
             <div class="form-text">
                 <input class="text-box" type="text" id="name" required>
                 <i class="bx bx-user-square"></i>
                 <label for="name">Name</label>
-                
             </div>
-            
             <div class="gender-form">
                 <i class="bx bx-man-woman"></i>
                 <div class="gender">Gender:</div>
@@ -36,55 +37,42 @@
                     <div class="list">
                         <input type="radio" name="gender" id="male" value="male"> <p class="list-gender">Male</p>
                     </div>
-
                     <div class="list">
                         <input type="radio" name="gender" id="female" value="female"> <p class="list-gender">Female</p>
                     </div>
                 </div>
-                
-                
-            
-                
             </div>
-
             <div class="form-text">
                 <input class="text-box" type="date" name="" id="dob" required>
                 <i class="bx bx-calendar"></i>
                 <label for="dob">Date of Birth</label>
-                <!-- Pake id untuk java script -->
             </div>
-
             <div class="form-text">
                 <input class="text-box" type="email" name="" id="email" required>
                 <i class="bx bx-envelope"></i>
                 <label for="email">Email</label>
-                
             </div>
-
-            
             <div class="form-text">
                 <input class="text-box" type="password" name="" id="pass" required>
                 <i class="bx bx-lock"></i>
                 <label for="pass">Password</label>
                 <i class="bx bx-eye eyeicon" id="eye-icon"></i>
-                <!-- <i class="bx bx-eye-slash"></i> -->
             </div>
 
-<!--             
-            Apakah ini diperlukan ?
             <div class="form-text">
-                <input class="text-box" type="password" name="" id="corfirm-pass" required>
+                <input class="text-box" type="password" name="" id="pass" required>
                 <i class="bx bx-lock"></i>
                 <label for="pass">Confirm Password</label>
-                <i class="bx bx-eye" id="eye-open"></i>
-                <i class="bx bx-eye-slash" id="eye-closed"></i>
-            </div> 
--->
+                <i class="bx bx-eye eyeicon" id="eye-icon"></i>
+            </div>
+
+            <div class="terms-container">
+                <input type="checkbox" id="terms">
+                <label for="terms" class="terms-text">I agree on <a href="">Terms</a> & <a href="">Agreement</a></label>
+            </div>
             <a href="homepage.html">
                 <button class="regist-button">REGISTER NOW</button>
             </a>
-          
-            
         </div>
     </section>
 
