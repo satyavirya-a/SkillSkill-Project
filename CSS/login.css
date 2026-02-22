@@ -222,13 +222,20 @@ a {
     font-family: "Outfit", sans-serif;
     font-size: 15px;
     color: var(--txt-color);
+
     display: flex;
-    align-items: center;
-    margin: 25px 5px;
+
+
+    margin: 15px 5px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }
 
 .terms-text {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .regist-button {
@@ -252,6 +259,8 @@ a {
 
     transition: 0.3s ease all;
     z-index: 1;
+
+    font-size: 15px;
 }
 
 .regist-button:before {
@@ -279,6 +288,7 @@ a {
     border: 2px solid var(--nav-color);
     color: var(--nav-color);
 
+    font-weight: bold;
     
 }
 
