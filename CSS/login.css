@@ -1,20 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Outfit:wght@100..900&display=swap');
-
-:root {
-  --bg-color: #FFFDF2;
-  --txt-color: #2D3436;
-  --nav-color: #2C3E50;
-  --sec-color: #E5CDC8;
-  --text-box-before: #979797;
-
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     display: flex;

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --bg-color: #FFFDF2;
+  --txt-color: #2D3436;
+  --nav-color: #2C3E50;
+  --sec-color: #E5CDC8;
+  --text-box-before: #979797;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+.navbar {
+    background-color: var(--nav-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+
+    height: 55px;
+    width: 100%;
+
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.475);
+
+    /* biar selalu diatas */
+    z-index: 999;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    /* agar tetap bagus di layar gede */
+    max-width: 1600px;
+    padding: 0 25px;
+    
+    
+}
+
+.navbar-menu {
+    display: flex;
+    flex-direction: row;
+
+    text-align: center;
+    gap: 20px;
+
+    list-style: none;
+}
+
+.navbar-container .navbar-menu li a {
+    text-decoration: none;
+    color: var(--bg-color);
+
+    font-size:20px;
+    font-weight: 500;
+
+    padding: 3px 10px;
+
+    border-radius: 20px;
+    border: 2px solid transparent;
+    
+    /* biar kaga mungkin dia bisa wrap */
+    white-space: nowrap;
+
+    transition: all 0.7s ease;
+}
+
+.navbar-container .navbar-menu li a:hover {
+    background-color: var(--bg-color);
+    border: 2px solid white;
+
+    color: black;
+
+}
+
+/* bikin burger menu di mobile */
+.navbar-toggle {
+    /* buat dia jadi gak keliatan di layar gede */
+    display: none;
+
+    background: transparent;
+    padding: 10px;
+
+    border: none;
+
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: white;
+
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
+}
+
+/* buat untuk layar < 700 */
+@media (max-width: 700px) {
+    .navbar {
+        backdrop-filter: none;
+    }
+
+    /* buat menu jadi vertikal kalau di hp */
+    .navbar-container .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        position: absolute;
+        
+        gap: 20px !important;
+        height: 10px;
+        width: 250px;
+        top: 0;
+        right: 0;
+
+        padding: 10px 1.5rem;
+
+        /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
+        backdrop-filter: blur(10px);
+
+    }
+
+    .navbar-toggle {
+        display: block;
+        /* untuk tetap diatas */
+        z-index: 999;
+    }
+}
