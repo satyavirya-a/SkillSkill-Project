@@ -18,14 +18,19 @@
 
 }
 
+a {
+    text-decoration: none;
+}
+
 .navbar {
     background-color: var(--nav-color);
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*cross axis*/
+    justify-content: center; /*main axis*/
 
     position: sticky;
+    top: 0;
 
     height: 55px;
     width: 100%;
@@ -49,7 +54,20 @@
     
 }
 
-.navbar-menu {
+#logo-title {
+    color: var(--sec-color);
+}
+
+.navbar-logo {
+    color: var(--sec-color);
+    font-size: 35px;
+    font-family: "Mansalva", sans-serif;
+
+    white-space: nowrap;
+
+}
+
+.navbar-container .navbar-menu {
     display: flex;
     flex-direction: row;
 
@@ -64,14 +82,14 @@
     color: var(--bg-color);
 
     font-size:20px;
-    font-weight: 500;
+    font-weight: 500; 
 
     padding: 3px 10px;
 
     border-radius: 20px;
     border: 2px solid transparent;
     
-    /* biar kaga mungkin dia bisa wrap */
+    /* biar kaga mungkin dia bisa wrap in newline*/
     white-space: nowrap;
 
     transition: all 0.7s ease;
@@ -95,8 +113,9 @@
 
     border: none;
 
-    cursor: pointer;
+    cursor: pointer; /*make it clickable*/
 }
+
 .bar {
     display: block;
     width: 25px;
@@ -117,6 +136,11 @@ button {
 @media (max-width: 700px) {
     .navbar {
         backdrop-filter: none;
+        box-shadow: none;
+    }
+
+    .navbar-container {
+        color: #2C3E50;
     }
 
     /* buat menu jadi vertikal kalau di hp */
@@ -127,16 +151,20 @@ button {
         position: absolute;
         
         gap: 20px !important;
-        height: 10px;
-        width: 250px;
-        top: 0;
+        height: 2000px;
+        top: 50px;
         right: 0;
 
         padding: 10px 1.5rem;
 
-        /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
+        background-color: #2C3E50;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
 
+    }
+
+    .navbar-container .navbar-menu.active {
+        display: flex;
     }
 
     .navbar-toggle {
@@ -144,4 +172,19 @@ button {
         /* untuk tetap diatas */
         z-index: 999;
     }
+
+
+    /*ganti jadi bentuk x kalau active*/
+    .navbar-toggle.active .bar:nth-child[2] {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child[1] {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child[1] {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
 }
