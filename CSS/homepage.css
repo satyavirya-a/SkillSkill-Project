@@ -1,0 +1,38 @@
+
+.content {
+    font-family: "Outfit", "sans-serif";
+}
+
+.title-section {
+    /* display: flex;
+
+    align-items: center;
+    justify-content: center; */
+
+    background-color: var(--sec-color);
+}
+
+.title-container {
+
+    text-align: center;
+    
+    padding: 40px;
+
+}
+
+.subtitle {
+    font-weight: 500;
+}
+
+
+@media (max-width: 700px) {
+
+    .title-container {
+        font-size: smaller;
+    }
+}
+
+
+
+
+
