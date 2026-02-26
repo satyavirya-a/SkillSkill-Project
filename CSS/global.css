@@ -77,11 +77,15 @@ a {
 
     text-align: center;
     gap: 20px;
+    margin-left: 20px;
 
     list-style: none;
 }
 
 .navbar-container .navbar-menu li a {
+    display: flex;
+    
+
     text-decoration: none;
     color: var(--bg-color);
 
@@ -107,6 +111,30 @@ a {
 
 }
 
+.register-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+    width: 250px;
+    gap: 10px;
+    
+}
+
+nav .register-container button {
+    width: 100px;
+    height: 35px;
+
+    color: var(--bg-color);
+}
+
+nav .register-button:focus, .register-button:hover {
+    color: var(--bg-color);
+}
+
+
+
 /* bikin burger menu di mobile */
 .navbar-toggle {
     /* buat dia jadi gak keliatan di layar gede */
@@ -128,12 +156,6 @@ a {
     background: white;
 
     transition: all 0.3s ease-in-out;
-}
-
-button {
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-
 }
 
 /* buat untuk layar < 700 */
