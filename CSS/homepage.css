@@ -28,7 +28,8 @@
 
 .landing-section {
     background: url(../Assets/landing-section.png) no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
 
     padding: 100px 100px 95px;
@@ -77,6 +78,48 @@
 
 }
 
+
+/* Promo Section Banner */
+.banner-section {
+    background-image: url(../Assets/banner.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #2c3e50da;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+
+    height: 20vh;
+}
+
+.banner-section h2, .banner-section h4 {
+    font-weight: 300;
+}
+
+.banner-section .register-button  {
+    background-color: var(--sec-color);
+    color: var(--txt-color);
+    cursor: pointer;
+    display: flex;
+
+    width: 120px;
+    height: 40px;
+}
+
+.banner-section span {
+    font-weight: 600;
+}
+
+
+
+
+
 @media (max-width: 1150px) {
     .landing-section {
         padding: 50px 40px;
@@ -89,9 +132,6 @@
         font-size: 35px;
         width: 50%;
     }
-
-    
-
 }
 
 @media (max-width: 700px) {
