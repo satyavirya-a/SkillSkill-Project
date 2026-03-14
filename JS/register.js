@@ -34,6 +34,21 @@ eyeIcon.onclick = function() {
     }
 }
 
+let eyeIconConf = document.getElementById("eye-icon-conf");
+let confPasswordInput = document.getElementById("conf-pass");
+
+eyeIconConf.onclick = function() {
+    if (confPasswordInput.type === "password") {
+        confPasswordInput.type = "text";
+        eyeIconConf.classList.remove("bx-eye");
+        eyeIconConf.classList.add("bx-eye-slash");
+    } else {
+        confPasswordInput.type = "password";
+        eyeIconConf.classList.remove("bx-eye-slash");
+        eyeIconConf.classList.add("bx-eye");
+    }
+}
+
 
 // buat fungsi buat pengawas ketika event pageshow
 window.addEventListener('pageshow', function(event) {
@@ -44,3 +59,17 @@ window.addEventListener('pageshow', function(event) {
   }
 });
 
+
+//Validasi Password dan Confirm Password
+// let confirmPasswordInput = document.getElementById("conf-pass");
+// console.log(confirmPasswordInput);
+// let registerBtn = document.getElementById("cofirmBtn");
+// registerBtn.onclick = function() {
+//     if (confirmPasswordInput != passwordInput) {
+//         alert("Confirm Password berbeda dengan password");
+//         // registerBtn.reload();
+//         return false;
+//     }
+
+//     return true;
+// }

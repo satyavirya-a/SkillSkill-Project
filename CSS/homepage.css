@@ -24,13 +24,98 @@
     font-weight: 500;
 }
 
+/* Landing Section */
+
+.landing-section {
+    background: url(../Assets/landing-section.png) no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+
+    padding: 100px 100px 95px;
+}
+
+.title-landing{
+    font-size: 6rem;
+    font-family:"Mansalva", sans-serif ;
+    color: var(--nav-color);
+    
+    position: relative;
+}
+
+.subtitle-landing {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--nav-color);
+
+
+    min-width: 30px;
+
+
+
+}
+
+.landing-section p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.5;
+
+}
+
+.LearnNow {
+
+    background-color: var(--sec-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+
+    display: flex;
+    margin-top: 25px;
+    
+    width: 20%;
+
+
+}
+
+@media (max-width: 1150px) {
+    .landing-section {
+        padding: 50px 40px;
+    }
+    .title-landing {
+        font-size: 85px;
+    }
+
+    .subtitle-landing {
+        font-size: 35px;
+        width: 50%;
+    }
+
+    
+
+}
 
 @media (max-width: 700px) {
+
+    .landing-section {
+        min-height: 50vh;
+        padding: 45px 20px;
+    }
+
+    .title-landing {
+        font-size: 70px;
+    }
+
+    .subtitle-landing {
+        font-size: 20px;
+        width: 50%;
+    }
 
     .title-container {
         font-size: smaller;
     }
 }
+
+
 
 
 

@@ -196,6 +196,18 @@ section {
     opacity: 1;
 }
 
+#eye-icon-conf {
+    position: absolute;
+    left: 85%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.text-box:focus ~ #eye-icon-conf,
+.text-box:valid ~ #eye-icon-conf {
+    opacity: 1;
+}
+
 a {
     text-decoration: none;
 }

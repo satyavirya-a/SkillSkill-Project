@@ -5,6 +5,7 @@
   --txt-color: #2D3436;
   --nav-color: #2C3E50;
   --sec-color: #E5CDC8;
+  --thr-color: #d63031;
   --text-box-before: #979797;
 
 }
@@ -18,7 +19,6 @@
     padding: 0;
 
     box-sizing: border-box;
-
 }
 
 a {
@@ -118,6 +118,7 @@ a {
     
 
     width: 250px;
+    min-width: 50px;
     gap: 10px;
     
 }
@@ -156,6 +157,33 @@ nav .register-button:focus, .register-button:hover {
     background: white;
 
     transition: all 0.3s ease-in-out;
+}
+
+/* buat untuk layar 700 - 785 */
+@media (max-width: 785px) and (min-width: 700px) {
+    .navbar-container .navbar-menu {
+        gap: 10px !important;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 16px;
+        padding: 3px 8px;
+    }
+
+    .register-container {
+        width: 180px;
+        gap: 5px;
+    }
+
+    nav .register-container button {
+        width: 80px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .navbar-logo {
+        font-size: 28px;
+    }
 }
 
 /* buat untuk layar < 700 */
