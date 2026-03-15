@@ -240,6 +240,10 @@ nav .register-button:focus, .register-button:hover {
     margin-right: 5px;
 }
 
+.social-media-coloumn {
+    padding-right: 40px;
+}
+
 #instagram-logo, #youtube-logo {
     width: fit-content;
     height: 30px;
