@@ -1,5 +1,8 @@
 .content {
     font-family: "Outfit", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 a {
@@ -233,6 +236,10 @@ a {
 
     border-color: black;
 
+    
+    display: flex;
+    justify-content: center;
+
 }
 
 
@@ -262,10 +269,67 @@ a {
 
 .see-more-btn {
     margin-top: 25px;
+
     display: flex;
-    align-items: center;
     justify-content: center;
 }
+
+
+/* Join Carrer Section */
+
+.join-carrer-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.join-carrer-section .background-square {
+    display: flex;
+    flex-direction: row;
+    
+
+    background-color:black ;
+    border-radius: 2rem; 
+
+    color: var(--sec-color);
+
+    height: 500px;
+    max-width: 1000px;
+    width: 90%;
+    margin: 50px;
+
+}
+
+.join-container {
+    direction: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    padding: 5px;
+}
+
+.join-container h2 {
+    font-size: 50px;
+    max-width: 1500px;
+}
+.join-carrer-section a .register-button {
+    margin-top: 10px;
+    width: 40%;
+    height: 30px;
+}
+
+.picture {
+    display: flex;
+
+    padding: 50px 30px;
+}
+
+.picture img {
+    max-width: 20rem;
+    border-radius: 50px
+}
+
 
 
 
@@ -308,6 +372,15 @@ a {
 
     .course-info {
         width: 350px;
+    }
+
+    .join-container h2 {
+        font-size: 40px;
+        
+    }
+
+    .picture img{
+        transform: scale(0.9);
     }
 }
 
@@ -363,6 +436,44 @@ a {
     .course-info {
         width: 90vw;
         max-width: 400px;
+    }
+
+    .join-carrer-section {
+        justify-content: none;
+    }
+
+    .join-carrer-section .background-square{
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        height: 325px;
+    }
+
+    .join-container {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .join-container a .register-button {
+        width: 100px;
+    }
+
+    .join-container h2{
+        font-size: 30px;
+        transition: 0.3s ease;
+
+    }
+
+    .picture {
+        padding: 10px 0 0 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .picture img{
+        transform: scale(0.9);
+    
     }
 }
 
