@@ -10,26 +10,7 @@ a {
 }
 
 
-.title-section {
-    /* display: flex;
 
-    align-items: center;
-    justify-content: center; */
-
-    background-color: var(--sec-color);
-}
-
-.title-container {
-
-    text-align: center;
-    
-    padding: 40px;
-
-}
-
-.subtitle {
-    font-weight: 500;
-}
 
 /* Landing Section */
 
@@ -327,7 +308,7 @@ a {
 
 .picture img {
     max-width: 20rem;
-    border-radius: 50px
+    border-radius: 50px;
 }
 
 
