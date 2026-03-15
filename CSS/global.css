@@ -22,6 +22,7 @@
 }
 
 a {
+    color: black;
     text-decoration: none;
 }
 
@@ -159,6 +160,104 @@ nav .register-button:focus, .register-button:hover {
     transition: all 0.3s ease-in-out;
 }
 
+
+
+/* FOOTER SECTION */
+.footer-section {
+    background-color: var(--nav-color);
+    color: white;
+
+    padding-top: 20px;
+
+    min-height: 200px;
+    width: 100%;
+
+    gap: 100px;
+
+    font-family: "Outfit", "sans-serif";
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.company-detail-coloumn h3 {
+    font-family: "Mansalva", sans-serif;
+    font-size: 25px;
+}
+
+.company-detail-coloumn h4 {
+    font-weight: 400;
+}
+
+.footer-section a {
+    font-style: none;
+    color: white;
+}
+
+.about-coloumn a {
+    text-decoration: underline;
+}
+
+.footer-section .products-coloumn ul li {
+    text-decoration: underline;
+    list-style: none;
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+
+    height: fit-content;
+    width: fit-content;
+
+    margin: 10px 0;
+}
+
+#location-logo {
+    width: fit-content;
+    height: 25px;
+
+    transition: 0.3s ease;
+
+    margin-right: 5px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+}
+
+#phone-logo {
+    width: fit-content;
+    height: 25px;
+
+    transition: 0.3s ease;
+
+    margin-right: 5px;
+}
+
+#instagram-logo, #youtube-logo {
+    width: fit-content;
+    height: 30px;
+
+    margin-top: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: smaller;
+}
+
+
+
+
+
 /* buat untuk layar 700 - 785 */
 @media (max-width: 785px) and (min-width: 700px) {
     .navbar-container .navbar-menu {
@@ -222,6 +321,7 @@ nav .register-button:focus, .register-button:hover {
     .navbar-container .navbar-menu.active {
         transition: 0.3s ease-in;
         display: flex;
+        align-items: flex-end;
     }
 
     .navbar-toggle {
@@ -243,5 +343,38 @@ nav .register-button:focus, .register-button:hover {
     .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .footer-section {
+        height: 400px;
+    }
+
+    .footer-section .footer-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        height: 350px;
+        gap: 10px;
+
+
+    }
+
+    .company-detail-coloumn {
+        height: fit-content;
+
+        text-align: center;
+    }
+
+    .about-coloumn {
+        margin-top: 1;
+    }
+
+    .copyright {
+        margin-top: 0;
+    }
+
+
+
     
 }
