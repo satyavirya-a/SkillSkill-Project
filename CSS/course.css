@@ -26,6 +26,7 @@
 .recommended-container {
     background-color: var(--thr-color);
     border-radius: 10px;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
