@@ -41,6 +41,7 @@
     min-height: 300px;
 
     display: flex;
+    justify-content: center;
 
 
 }
@@ -71,7 +72,7 @@
     align-items: center;
     justify-content: center;
 
-    padding-left: 50px ;
+    padding-left: 20px ;
     gap: 20px;
 }
 
@@ -94,5 +95,248 @@
 
 
 .mission-section {
+    height: 250px;
+
+    padding-top: 15px;
+}
+
+.mission-section h1, .mission-section p {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.mission-container {
+    margin-top: 15px;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 1%;
+}
+
+.mission-square {
+    background-color: var(--sec-color);
+
+    padding: 10px;
+    max-width: 250px;
+    transition: 0.5s;
+}
+
+.mission-square:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5) ;
+
+}
+
+.journey-heading {
+    text-align: center;;
+}
+
+.journey-box .title {
     
+    box-shadow: 0 5px 0px 0px rgba(0, 0, 0, 0.42);
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.journey-box .year {
+    background-color: var(--nav-color);
+    color: white;
+    border-radius: 10px;
+
+    margin: 0 1rem;
+    padding: 0.2rem 0.8rem;
+
+    height: fit-content;
+
+}
+
+.journey-box p {
+    padding: 1rem 0 1rem 1rem;
+}
+
+.journey-section ul {
+    padding: 50px 0;
+}
+
+.journey-section ul li {
+    list-style: none;
+    position: relative;
+
+    width: 7px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.journey-box {
+    position: relative;
+    width: clamp(280px, 90vw, 450px);
+    height: fit-content;
+
+    background-color: var(--sec-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    /* transform: translateX(400%); */
+    transition: all 0.5s ease-in-out;
+
+}
+
+/* right side */
+.journey-section ul li:nth-child(odd) .journey-box {
+    left: 50px;
+}
+
+/* left side */
+.journey-section ul li:nth-child(even) .journey-box {
+    left: -500px;
+    /* transform: translateX(-400%); */
+}
+
+/* .journey-section ul li .journey-box.show {
+    transform: translate(0%);
+    transition: all 0.5s ease-in-out;
+} */
+
+.journey-section ul li i {
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: var(--thr-color);
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.journey-box::before {
+    content: "";
+    position: absolute;
+
+    top: 5px;
+    width: 0;
+    right: 0;
+
+    border-style: solid;
+}
+
+.journey-section ul li:nth-child(odd) .journey-box::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--sec-color);
+}
+
+.journey-section ul li:nth-child(even) .journey-box::before {
+    right: -16px;
+    border-width: 8px 0px 8px 16px;
+    border-color: transparent var(--sec-color);
+}
+
+@media (max-width: 1024px) and (min-width: 701px) {
+    .journey-box {
+        width: min(450px, calc(50vw - 60px));
+    }
+
+    .journey-section ul li:nth-child(odd) .journey-box {
+        left: 30px;
+    }
+
+    .journey-section ul li:nth-child(even) .journey-box {
+        left: calc(100% - 365px);
+    }
+
+    .journey-box p {
+        word-break: break-word;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .journey-section ul li:nth-child(even) .journey-box {
+        left: calc(100% - 490px);
+    }
+}
+
+
+
+@media (max-width: 700px) {
+
+    .vision-container {
+        flex-direction: column;
+
+        padding: 40px 0;
+        margin-left: 0;
+    }
+
+    .vision-section .vision-container .image {
+        margin: 0;
+    }
+
+    .vision-text {
+        padding: 0;
+
+        text-align: center;
+    }
+    .mission-section {
+        justify-content: center;
+        height: fit-content;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    .mission-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mission-square {
+        max-width: 400px;
+        height: 150px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }   
+
+    .journey-section ul {
+        padding: 10px 0;
+    }
+
+
+    .journey-box {
+        width: 85vw;
+        max-width: 320px;
+        left: 50% !important;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 15px;
+
+        margin-top: 15px;
+
+    }
+
+    .journey-box::before {
+        display: none;
+    }
+
+    .journey-box p {
+        padding: 1rem 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    .journey-box .title {
+        margin: 0;
+        padding: 0;
+    }
+
 }

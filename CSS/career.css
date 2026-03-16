@@ -96,6 +96,10 @@
         flex-direction: column;
         width: fit-content;
     }
+
+    .job-info-long {
+        text-align: left;
+    }
 }
 
 
