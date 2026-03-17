@@ -55,6 +55,8 @@ section {
     padding: 20px 50px;
     border-radius: 20px;
     
+    height: fit-content;
+    
 }
 
 .form-text {
@@ -232,6 +234,19 @@ input[type="checkbox"] {
 
 .terms-text {
     margin-left: 5px;
+}
+
+.register-login-change {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    gap: 5px;
+
+}
+
+.register-login-change a:hover {
+    text-decoration: underline;
 }
 
 
