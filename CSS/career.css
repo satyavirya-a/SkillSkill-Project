@@ -1,4 +1,37 @@
 
+.heading-section {
+    height: fit-content;
+
+    background-color: var(--nav-color);
+}
+
+.heading-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+}
+
+.heading-text {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.heading-text a {
+    color: white;
+}
+
+.heading-text a:hover {
+    text-decoration: underline;
+}
+
+.popular-jobs-section {
+    padding-top: 25px;
+}
+
 .popular-heading {
     text-align: center;
 }
@@ -54,6 +87,8 @@
 
 .list-jobs-section {
     margin-left: 10px;
+
+    max-width: fit-content;
 }
 .jobs-container {
     row-gap: 4rem;
@@ -143,7 +178,7 @@
 .qna-section {
     margin: 0 auto;
     padding: 4rem;
-    width: 48rem;
+    max-width: 48rem;
 }
 
 .qna-container {

@@ -17,13 +17,8 @@
     font-size: 40px;
 }
 
-.heading-section .button {
-    width: 300px;
-    border-radius: 0;
-}
-
-.heading-section .button::before{
-    border-radius: 0;
+.heading-section a:hover {
+    text-decoration: underline;
 }
 
 
