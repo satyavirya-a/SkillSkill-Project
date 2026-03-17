@@ -1,10 +1,38 @@
 
-.heading {
-    height: 150px;
+.heading-section {
+    height: 300px;
     background-color: var(--sec-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
 }
 
 .heading-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.heading-section .button {
+    width: 300px;
+    border-radius: 0;
+}
+
+.heading-section .button::before{
+    border-radius: 0;
+}
+
+
+.banner {
+    height: 150px;
+    background-color: var(--nav-color);
+}
+
+.banner-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +41,8 @@
 
     font-size: 45px;
     font-weight: 600;
+
+    color: white;
 }
 
 .recommed-course-section {
@@ -21,10 +51,11 @@
     align-items: center;
 
     flex-direction: column;
+
+    padding-top: 15px;
 }
 
 .recommended-container {
-    background-color: var(--thr-color);
     border-radius: 10px;
     
     display: flex;
@@ -91,7 +122,7 @@
 }
 
 .decription {
-    background-color: white;
+    background-color: wheat;
     color: var(--txt-color);
     height: 0;
     overflow: hidden;
@@ -146,13 +177,19 @@
 
 /* Course List */
 
+.course-section {
+    background-color: var(--sec-color);
+    margin: 20px 40px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
 
-.course-container .container{
-    margin-top: 100px;
+
+.course-section .container{
 
 
+    margin: 10px 40px 60px 50px;
     padding: 40px 32p;
-    margin-bottom: 60px ;
 
     box-shadow: 0 8px black;
     padding-bottom: 60px;
@@ -185,7 +222,21 @@
 
     gap: 5px;
 
-    margin-left: 50px;
+    margin-left: 20px;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.cards-container:hover {
+    background-color: var(--nav-color);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.441);
+    color: white;
+}
+
+.cards-container:hover h2 {
+    color: white;
 }
 
 .cards-container a img {
@@ -246,7 +297,7 @@
 
 @media (max-width: 880px) {
 
-    .heading-title {
+    .banner-title {
         text-align: center;
     }
 
