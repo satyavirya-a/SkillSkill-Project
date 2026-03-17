@@ -8,6 +8,8 @@
   --thr-color: #d63031;
   --text-box-before: #979797;
 
+  --title-font:"Mansalva", sans-serif;
+  --text-font: "Outfit", "sans-serif";
 }
 
 
@@ -22,7 +24,7 @@
 }
 
 body {
-    font-family: "Outfit", "sans-serif";
+    font-family: var(--text-font);
 }
 
 a {

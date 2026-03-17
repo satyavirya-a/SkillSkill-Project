@@ -1,3 +1,57 @@
+
+.popular-heading {
+    text-align: center;
+}
+
+.popular-heading span {
+    font-family: var(--title-font);
+}
+
+.popular-container {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    margin: 10px auto;
+
+    overflow-x: auto;
+}
+
+.popular-container::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    animation: spin 5s infinite linear;
+    padding-right: 1em;
+}
+
+.popular-card {
+    flex: 0 0 5em;
+    min-width: 200px;
+    min-height: 300px ;
+
+    padding: 1em;
+    background-color: wheat;
+    text-align: center;
+    align-content: center;
+
+    border-radius: 10px;
+
+
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+
 .list-jobs-section {
     margin-left: 10px;
 }
@@ -21,8 +75,8 @@
     background-color: var(--sec-color);
 
     padding: 1rem 2rem 1rem 2rem;
+    margin-right: 50px ;
     border-radius: 1.5rem;
-    width: 33rem;
 
     display: flex;
     flex-direction: row;
@@ -52,7 +106,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    max-width: 350px;
+    min-width: 300px;
 }
 
 .job-info-title {
@@ -86,7 +140,121 @@
     width: fit-content;
 }
 
+.qna-section {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 48rem;
+}
+
+.qna-container {
+}
+
+.qna-container .qna-box {
+    border-bottom: 1px solid black;
+}
+
+.qna-container button[aria-expanded="true"] {
+    border-bottom: 1px solid var(--nav-color);
+}
+
+.qna-container button {
+    position: relative;
+    display: block;
+    text-align: left;
+    font-size: 1.15rem;
+    font-weight: 300;
+    width: 100%;
+    padding: 1em 0;
+    color: var(--txt-color);
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.qna-container button:hover,
+.qna-container button:focus {
+    cursor: pointer;
+    color: var(--nav-color);
+    font-weight: 600;
+}
+
+.qna-container button:hover::after,
+.qna-container button:focus::after {
+    cursor: pointer;
+    color: var(--nav-color);
+    border: 1px solid var(--nav-color);
+}
+
+.qna-container button .qna-title {
+    padding: 1em 1.5em 1em 0;
+}
+
+.qna-container button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+}
+
+.qna-container button .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+}
+
+.qna-container button .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background-color: currentColor;
+}
+
+.qna-container button[aria-expanded="true"] {
+    color: var(--nav-color);
+}
+
+.qna-container button[aria-expanded="true"] .icon::after {
+    width: 0;
+}
+
+.qna-container button[aria-expanded="true"] + .qna-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 0.2s linear;
+    will-change: opacity, max-height;
+}
+
+.qna-container .qna-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s linear;
+    will-change: opacity, max-height;
+}
+
+.qna-container .qna-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 2em 0;
+}
+
 @media (max-width: 700px) {
+    .popular-container {
+        max-width: auto;
+    }
     .list-jobs-section {
         display: flex;
         text-align: center;
@@ -95,11 +263,13 @@
     .job-card {
         flex-direction: column;
         width: fit-content;
+        margin-right: 20px;
     }
 
     .job-info-long {
         text-align: left;
     }
+
 }
 
 
