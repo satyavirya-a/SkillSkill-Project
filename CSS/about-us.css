@@ -131,7 +131,8 @@
     background-color: var(--sec-color);
 
     padding: 10px;
-    max-width: 250px;
+    max-width: 280px;
+    min-height: 250px;
     transition: 0.5s;
 
 }
@@ -345,7 +346,8 @@
 
     .mission-square {
         max-width: 400px;
-        height: 150px;
+        min-height: 170px;
+        height: auto;
         
         display: flex;
         flex-direction: column;

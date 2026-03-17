@@ -25,6 +25,7 @@
 
 body {
     font-family: var(--text-font);
+    background-image: url(../Assets/white-background.png);
 }
 
 a {
@@ -170,6 +171,7 @@ nav .register-button:focus, .register-button:hover {
 
 /* FOOTER SECTION */
 .footer-section {
+    background-image: url(../Assets/footer-background.png);
     background-color: var(--nav-color);
     color: white;
 
@@ -181,13 +183,27 @@ nav .register-button:focus, .register-button:hover {
     gap: 100px;
 
     font-family: "Outfit", "sans-serif";
+
 }
 
 .footer-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-around;
     padding: 0 20px;
+}
+
+.content-coloumn {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    padding: 20px 20px 0;
+}
+
+.empty-column {
+    max-width: 225px;
+    margin: 0 15px;
 }
 
 .company-detail-coloumn h3 {
@@ -355,7 +371,10 @@ nav .register-button:focus, .register-button:hover {
     }
 
     .footer-section {
-        height: 400px;
+        height: fit-content;
+        padding: 40px;
+
+        background-image: url(../Assets/footer-background-vertical.png);
     }
 
     .footer-section .footer-content{
@@ -364,10 +383,15 @@ nav .register-button:focus, .register-button:hover {
         align-items: center;
         justify-content: flex-start;
 
-        height: 350px;
+        height: 250px;
         gap: 10px;
 
 
+    }
+
+    .content-coloumn {
+        margin: 10px 0;
+        
     }
 
     .company-detail-coloumn {
@@ -378,6 +402,15 @@ nav .register-button:focus, .register-button:hover {
 
     .about-coloumn {
         margin-top: 1;
+    }
+
+    .social-media-coloumn {
+        padding: 0;
+    }
+
+    .social-media-logos {
+        display: flex;
+        justify-content: center;
     }
 
     .copyright {

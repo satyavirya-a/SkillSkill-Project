@@ -14,7 +14,7 @@
 .heading-title {
     text-align: center;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 34px;
 }
 
 .heading-section a:hover {
@@ -156,7 +156,7 @@
 }
 
 .video:hover   ~ .decription, .video:focus ~ .decription, .decription:hover {
-    height: 130px;
+    height: 115px;
     transition: 0.5s ease;
 
     padding: 10px 0 0 10px;
@@ -190,7 +190,7 @@
     padding-bottom: 60px;
 
     display: flex;
-    gap: 40px
+    gap: 24px
 
 }
 
