@@ -1,14 +1,26 @@
 
 .heading-section {
     height: 300px;
+    
     background-color: var(--sec-color);
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    gap: 20px;
+    gap: 5px;
+}
+
+.heading-section img {
+    object-fit: cover;
+    height: auto;
+}
+
+.heading-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .heading-title {
@@ -17,7 +29,7 @@
     font-size: 34px;
 }
 
-.heading-section a:hover {
+.heading-content a:hover {
     text-decoration: underline;
 }
 
@@ -25,19 +37,30 @@
 .banner {
     height: 150px;
     background-color: var(--nav-color);
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .banner-title {
-    display: flex;
+    display: inline;
+    text-align: center;
     justify-content: center;
     align-items: center;
+    align-content: center;
 
     height: 150px;
+    padding: 0 10px;
 
     font-size: 45px;
     font-weight: 600;
 
     color: white;
+}
+
+.banner-title span {
+    font-family: var(--title-font);
 }
 
 .recommed-course-section {
@@ -190,17 +213,18 @@
     padding-bottom: 60px;
 
     display: flex;
+    flex-direction: column;
     gap: 24px
 
 }
 
 .course-list {
     display: flex;
-    flex-direction: column;
-
+    flex-wrap: wrap;
+    justify-content: center;
     
 
-    gap: 10px;
+    gap: 30px;
 }
 
 .course-container h2 {
@@ -218,9 +242,11 @@
     gap: 5px;
 
     margin-left: 20px;
-    width: fit-content;
+    max-width: 500px;
     padding: 15px;
     border-radius: 10px;
+
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.644);
 
 }
 
@@ -236,7 +262,7 @@
 
 .cards-container a img {
     height: 180px;
-    width: 100%;
+    width: fit-content;
     object-fit: cover;
 
 }
@@ -340,6 +366,20 @@
 
     .decription h3, .decription h4, .decription p {
         max-width: 350px;
+    }
+
+    .banner {
+        height: fit-content;
+    }
+
+    .course-section .container {
+        margin-left: 40px;
+    }
+
+    .course-list .cards-container {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0;
     }
 }
 
