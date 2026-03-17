@@ -2,6 +2,7 @@
 
 .heading-container {
     background-color: white;
+    background-image: url(../Assets/white-background.png);
     height: 125px;
 
     text-align: center;
@@ -9,6 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 30px;
 }
 
 .title-section {
@@ -34,7 +37,7 @@
 
 
 .vision-container {
-    background-color: var(--nav-color);
+    background-image: linear-gradient(to right,transparent 0%, var(--nav-color) 60%);
     color: white;
     row-gap: 3rem;
 
@@ -46,9 +49,13 @@
 
 }
 
-.vision-title h4 {
+.data-title {
     font-weight: 400;
     height: 30px;
+}
+
+.data-num {
+    color: var(--sec-color);
 }
 
 .vision-section .vision-container .image{
@@ -59,10 +66,12 @@
     justify-content: center;
 
     margin-left: 20px;
-
+    
 }
 
 .vision-container .image img {
+    width: 300px;
+    height: auto;
     border-radius: 25px;
 }
 
@@ -97,10 +106,6 @@
     margin-bottom: 2rem;
 }
 
-.data-num {
-    font-weight: 600;
-}
-
 
 .mission-section {
     height: fit-content;
@@ -115,7 +120,7 @@
 
 .mission-container {
     margin-top: 15px;
-    padding: 0 10px;
+    padding: 0 30px;
 
     height: fit-content;
 
@@ -124,7 +129,7 @@
 
     text-align: center;
 
-    gap: 1%;
+    gap: 2%;
 }
 
 .mission-square {
@@ -139,7 +144,7 @@
 
 .mission-square img {
     width: 90%;
-    height: 100px;
+    height: fit-content;
     margin: 15px 0;
     object-fit: cover;
     border-radius: 10px;
@@ -384,6 +389,7 @@
     .journey-box .title {
         margin: 0;
         padding: 0;
+        font-size: 16px;
     }
 
 }
