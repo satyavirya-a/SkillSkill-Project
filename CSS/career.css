@@ -7,9 +7,16 @@
 
 .heading-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    height: 300px;
+    height: fit-content;
+}
+
+.heading-picture {
+    height: fit-content;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* flex: 1; */
 }
 
 .heading-text {
@@ -20,8 +27,22 @@
     gap: 7px;
 }
 
+.heading-text h2 {
+    font-size: 50px;
+}
+
+.heading-text h2 span {
+    font-family: var(--title-font);
+}
+
+.heading-text p {
+    font-size: 20px;
+}
+
 .heading-text a {
     color: white;
+    
+    margin: 5px 0;
 }
 
 .heading-text a:hover {
@@ -41,7 +62,7 @@
 }
 
 .popular-container {
-    width: 80%;
+    width: 100%;
     height: fit-content;
     display: flex;
     margin: 10px auto;
@@ -84,14 +105,27 @@
     to {translate: -100%;}
 }
 
+.popular-card img {
+    height: 250px;
+    padding-top: 10px;
+    width: auto;
+    border-radius: 10px;
+}
+
 
 .list-jobs-section {
+    margin-top: 50px;
     margin-left: 10px;
 
-    max-width: fit-content;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
 }
 .jobs-container {
-    row-gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
 .section-subtitle {
@@ -99,8 +133,10 @@
 }
 
 .jobs-container .content {
-    display: grid;
-    justify-content: left;
+    display: flex;
+    flex-direction: column;
+
+    width: inherit;
     gap: 1rem;
 
     margin-left: 20px;
@@ -110,8 +146,9 @@
     background-color: var(--sec-color);
 
     padding: 1rem 2rem 1rem 2rem;
-    margin-right: 50px ;
+    margin-right: 60px ;
     border-radius: 1.5rem;
+    max-width: 1000px;
 
     display: flex;
     flex-direction: row;
@@ -120,15 +157,26 @@
 
 }
 
+.content .job-card:hover {
+    transition: 0.5s ease;
+    box-shadow: 5px 5px 5px 5px var(--nav-color);
+}
+
 .job-card .job-picture {
     width: 200px;
-    transition: scale .4s;
+    height: 250px;
+    transition: scale .5s;
     transform-origin: center ;
     object-fit: cover;
+    overflow: hidden;
+
+    border-radius: 5px;
 }
 
 .job-card:hover .job-picture {
-    scale: 1.1;
+    transition: 0.5s ease;
+    transform-origin: center;
+    height: 260px;
 }
 
 .job-desc {
@@ -176,12 +224,21 @@
 }
 
 .qna-section {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 4rem;
-    max-width: 48rem;
+    width: 100%;
+}
+
+.qna-heading {
+    font-size: 30px;
 }
 
 .qna-container {
+    max-width: 1000px;
+    width: 100%;
 }
 
 .qna-container .qna-box {
@@ -197,7 +254,7 @@
     display: block;
     text-align: left;
     font-size: 1.15rem;
-    font-weight: 300;
+    font-weight: 500;
     width: 100%;
     padding: 1em 0;
     color: var(--txt-color);
@@ -210,7 +267,7 @@
 .qna-container button:focus {
     cursor: pointer;
     color: var(--nav-color);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .qna-container button:hover::after,
@@ -221,7 +278,9 @@
 }
 
 .qna-container button .qna-title {
-    padding: 1em 1.5em 1em 0;
+    padding: 1em 1.5em 1em 0.5em;
+    font-family: var(--text-font);
+    font-size: 20px;
 }
 
 .qna-container button .icon {
@@ -281,12 +340,38 @@
 }
 
 .qna-container .qna-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
     margin: 2em 0;
+    padding-left: 40px;
 }
 
 @media (max-width: 700px) {
+
+    .heading-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading-picture {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading-picture img {
+        max-width: 200px;
+        height: auto;
+        display: block;
+    }
+
+    .heading-text {
+        padding-left: 25px;
+        margin-bottom: 20px;
+    }
+
     .popular-container {
         max-width: auto;
     }
@@ -303,6 +388,10 @@
 
     .job-info-long {
         text-align: left;
+    }
+
+    .qna-heading {
+        text-align: center;
     }
 
 }
