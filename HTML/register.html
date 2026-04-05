@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="../CSS/component.css">
     <link rel="stylesheet" href="../CSS/register.css">
 
-    <!-- icon fonts -->
-        <!-- Basic Icons -->
-        <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-        <!-- Filled Icons -->
-        <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
-        <!-- Brand Icons -->
-        <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
     
 </head>
 <body>
@@ -31,7 +24,7 @@
             <div class="form-content">
                 <div class="form-text">
                     <input class="text-box" type="text" id="name" required minlength="3" pattern="^[A-Za-z][A-Za-z\s'-]{2,}$" title="Use at least 3 letters. Spaces, apostrophes, and hyphens are allowed." autofocus>
-                    <i class="bx bx-user-square"></i>
+                    <img src="../Assets/user-icon.png">
                     <label for="name">Name</label>
 
                     <span class="error"></span>
@@ -39,7 +32,7 @@
                 </div>
 
                 <div class="gender-form">
-                    <i class="bx bx-man-woman"></i>
+                   <img src="../Assets/gender-icon.png">
                     <div class="gender">Gender:</div>
                     <div class="gender-option">
                         <div class="list">
@@ -52,28 +45,27 @@
                             <input type="radio" name="gender" id="prefer-not-to-say" value="prefer-not-to-say"> <p class="list-gender">Preferred not to say</p>
                         </div>
                     </div>
-
                     <span class="error"></span>
                 </div>
                 <div class="form-text">
                     <input class="text-box" type="date" name="" id="dob" required>
-                    <i class="bx bx-calendar"></i>
+                    <img src="../Assets/date-icon.png">
                     <label for="dob">Date of Birth</label>
 
                     <span class="error"></span>
                 </div>
                 <div class="form-text">
                     <input class="text-box" type="email" name="" id="email" required>
-                    <i class="bx bx-envelope"></i>
+                    <img src="../Assets/mail-icon.png">
                     <label for="email">Email</label>
 
                     <span class="error"></span>
                 </div>
                 <div class="form-text">
                     <input class="text-box" type="password" name="" id="pass" required>
-                    <i class="bx bx-lock"></i>
+                    <img src="../Assets/lock-icon.png">
                     <label for="pass">Password</label>
-                    <i class="bx bx-eye eyeicon" id="eye-icon"></i>
+                    <img src="../Assets/eye-icon.png" id="eye-icon">
 
                     <span class="error"></span>
 
@@ -81,16 +73,19 @@
 
                 <div class="form-text">
                     <input class="text-box" type="password" name="" id="conf-pass" required>
-                    <i class="bx bx-lock"></i>
+                    <img src="../Assets/lock-icon.png">
                     <label for="conf-pass">Confirm Password</label>
-                    <i class="bx bx-eye eyeicon" id="eye-icon-conf"></i>
+                    <img src="../Assets/eye-icon.png" id="eye-icon-conf">
 
                     <span class="error"></span>
                 </div>
 
                 <div class="terms-container">
-                    <input type="checkbox" id="terms">
-                    <label for="terms" class="terms-text">I agree to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
+                    <div class="terms-content">
+                        <input type="checkbox" id="terms">
+                        <label for="terms" class="terms-text">I agree to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
+                    </div>
+                    
                     <span class="error"></span>
                 </div>
 

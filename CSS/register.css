@@ -91,6 +91,12 @@ section {
     width: inherit;
 }
 
+.gender-form span {
+    padding-top: 5px;
+    font-size: 15px;
+    width: inherit;
+}
+
 .gender-form {
     position: relative;
     font-family: "Outfit", sans-serif;
@@ -101,9 +107,10 @@ section {
     margin: 0 10px;
 }
 
-.gender-form i {
+.gender-form img {
     left: 15px;
     font-size: 24px; 
+    height: 25px;
 }
 
 .gender {
@@ -159,11 +166,12 @@ section {
     opacity: 1;
 }
 
-.form-text i {
+.form-text img {
     position: absolute;
     left: 15px;
     top: 15px;
     font-size: 24px; 
+    height: 25px;
 }
 
 
@@ -253,7 +261,8 @@ a {
     color: var(--txt-color);
 
     display: flex;
-
+    flex-direction: column;
+    gap: 5px;
 
     margin: 0 5px;
 }
@@ -261,6 +270,10 @@ a {
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
+}
+
+.terms-content {
+    display: flex;
 }
 
 .terms-text {
@@ -350,9 +363,10 @@ input[type="checkbox"] {
     .form-text:hover label, .form-text:focus label, .form-text:valid label{
         padding: 0 5px 0 0;
     }
-    .form-text i {
+    .form-text img {
         font-size: 18px;
         left: 10px;
+        padding-bottom: 10px;
 
     }
     .text-box {

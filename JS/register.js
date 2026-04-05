@@ -35,12 +35,10 @@ let passwordInput = document.getElementById("pass");
 eyeIcon.onclick = function() {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
-        eyeIcon.classList.remove("bx-eye");
-        eyeIcon.classList.add("bx-eye-slash");
+        eyeIcon.src = "../Assets/eye-slash-icon.png"
     } else {
         passwordInput.type = "password";
-        eyeIcon.classList.remove("bx-eye-slash");
-        eyeIcon.classList.add("bx-eye");
+        eyeIcon.src = "../Assets/eye-icon.png"
     }
 }
 
@@ -50,12 +48,10 @@ let confPasswordInput = document.getElementById("conf-pass");
 eyeIconConf.onclick = function() {
     if (confPasswordInput.type === "password") {
         confPasswordInput.type = "text";
-        eyeIconConf.classList.remove("bx-eye");
-        eyeIconConf.classList.add("bx-eye-slash");
+        eyeIconConf.src = "../Assets/eye-slash-icon.png"
     } else {
         confPasswordInput.type = "password";
-        eyeIconConf.classList.remove("bx-eye-slash");
-        eyeIconConf.classList.add("bx-eye");
+       eyeIconConf.src = "../Assets/eye-icon.png"
     }
 }
 
@@ -76,9 +72,18 @@ let dobInput = document.getElementById("dob");
 let emailInput = document.getElementById("email");
 let termsInput = document.getElementById("terms");
 
+const getErrorDisplay = element => {
+    const fieldContainer = element.closest(".form-text, .gender-form, .terms-container");
+    if (fieldContainer) {
+        return fieldContainer.querySelector(".error");
+    }
+
+    const parent = element.parentElement;
+    return parent ? parent.querySelector(".error") : null;
+};
+
 const setError = (element, message) => {
-    const textBox = element.parentElement;
-    const errorDisplay = textBox.querySelector(".error");
+    const errorDisplay = getErrorDisplay(element);
 
     if (errorDisplay) {
         errorDisplay.innerText = message;
@@ -87,8 +92,7 @@ const setError = (element, message) => {
 }
 
 const setSuccess = element => {
-    const textBox = element.parentElement;
-    const errorDisplay = textBox.querySelector(".error");
+    const errorDisplay = getErrorDisplay(element);
 
     if (errorDisplay) {
         errorDisplay.innerText = '';
