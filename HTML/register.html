@@ -21,66 +21,92 @@
 <body>
     <div class="opening">VisualSkill</div>
     <section>
-        <div class="kotak-tengah" style="position: relative; z-index: 1;">
+        <form id="form" action="/" class="kotak-tengah">
             <div class="pict-container">
                 <img src="../Assets/atom.gif" alt="atom" id="atom-gif" />
             </div>
     
             <div class="title">Register</div>
-            <div class="form-text">
-                <input class="text-box" type="text" id="name" required>
-                <i class="bx bx-user-square"></i>
-                <label for="name">Name</label>
-            </div>
-            <div class="gender-form">
-                <i class="bx bx-man-woman"></i>
-                <div class="gender">Gender:</div>
-                <div class="gender-option">
-                    <div class="list">
-                        <input type="radio" name="gender" id="male" value="male"> <p class="list-gender">Male</p>
-                    </div>
-                    <div class="list">
-                        <input type="radio" name="gender" id="female" value="female"> <p class="list-gender">Female</p>
-                    </div>
+
+            <div class="form-content">
+                <div class="form-text">
+                    <input class="text-box" type="text" id="name" required minlength="3" pattern="^[A-Za-z][A-Za-z\s'-]{2,}$" title="Use at least 3 letters. Spaces, apostrophes, and hyphens are allowed." autofocus>
+                    <i class="bx bx-user-square"></i>
+                    <label for="name">Name</label>
+
+                    <span class="error"></span>
+
                 </div>
-            </div>
-            <div class="form-text">
-                <input class="text-box" type="date" name="" id="dob" required>
-                <i class="bx bx-calendar"></i>
-                <label for="dob">Date of Birth</label>
-            </div>
-            <div class="form-text">
-                <input class="text-box" type="email" name="" id="email" required>
-                <i class="bx bx-envelope"></i>
-                <label for="email">Email</label>
-            </div>
-            <div class="form-text">
-                <input class="text-box" type="password" name="" id="pass" required>
-                <i class="bx bx-lock"></i>
-                <label for="pass">Password</label>
-                <i class="bx bx-eye eyeicon" id="eye-icon"></i>
-            </div>
 
-            <div class="form-text">
-                <input class="text-box" type="password" name="" id="conf-pass" required>
-                <i class="bx bx-lock"></i>
-                <label for="pass">Confirm Password</label>
-                <i class="bx bx-eye eyeicon" id="eye-icon-conf"></i>
-            </div>
+                <div class="gender-form">
+                    <i class="bx bx-man-woman"></i>
+                    <div class="gender">Gender:</div>
+                    <div class="gender-option">
+                        <div class="list">
+                            <input type="radio" name="gender" id="male" value="male"> <p class="list-gender">Male</p>
+                        </div>
+                        <div class="list">
+                            <input type="radio" name="gender" id="female" value="female"> <p class="list-gender">Female</p>
+                        </div>
+                        <div class="list">
+                            <input type="radio" name="gender" id="prefer-not-to-say" value="prefer-not-to-say"> <p class="list-gender">Preferred not to say</p>
+                        </div>
+                    </div>
 
-            <div class="terms-container">
-                <input type="checkbox" id="terms">
-                <label for="terms" class="terms-text">I agree to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
-            </div>
-            <a href="homepage.html">
-                <button class="button" id="cofirmBtn">Register Now</button>
-            </a>
+                    <span class="error"></span>
+                </div>
+                <div class="form-text">
+                    <input class="text-box" type="date" name="" id="dob" required>
+                    <i class="bx bx-calendar"></i>
+                    <label for="dob">Date of Birth</label>
 
-            <div class="register-login-change">
-                Already Have an Account? 
-                <a href="login.html"> Login Here <span>&rarr;</span></a>
+                    <span class="error"></span>
+                </div>
+                <div class="form-text">
+                    <input class="text-box" type="email" name="" id="email" required>
+                    <i class="bx bx-envelope"></i>
+                    <label for="email">Email</label>
+
+                    <span class="error"></span>
+                </div>
+                <div class="form-text">
+                    <input class="text-box" type="password" name="" id="pass" required>
+                    <i class="bx bx-lock"></i>
+                    <label for="pass">Password</label>
+                    <i class="bx bx-eye eyeicon" id="eye-icon"></i>
+
+                    <span class="error"></span>
+
+                </div>
+
+                <div class="form-text">
+                    <input class="text-box" type="password" name="" id="conf-pass" required>
+                    <i class="bx bx-lock"></i>
+                    <label for="conf-pass">Confirm Password</label>
+                    <i class="bx bx-eye eyeicon" id="eye-icon-conf"></i>
+
+                    <span class="error"></span>
+                </div>
+
+                <div class="terms-container">
+                    <input type="checkbox" id="terms">
+                    <label for="terms" class="terms-text">I agree to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
+                    <span class="error"></span>
+                </div>
+
+                <button class="button" id="cofirmBtn" type="submit">Register Now</button>
+                
+
+                <div class="register-login-change">
+                    Already Have an Account? 
+                    <a href="login.html"> Login Here <span>&rarr;</span></a>
+                </div>
+
+
+
             </div>
-        </div>
+            
+        </form>
     </section>
 
     <script src="../JS/register.js"></script>

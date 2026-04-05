@@ -1,0 +1,15 @@
+body {
+    height: 750px;
+}
+.kotak-tengah{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (width <= 700px) {
+    .kotak-tengah .button {
+        width: 200px;
+        height: 40px;
+    }
+}

@@ -47,7 +47,7 @@ a {
     height: 55px;
     width: 100%;
 
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.475);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.167);
 
     /* biar selalu diatas */
     z-index: 999;

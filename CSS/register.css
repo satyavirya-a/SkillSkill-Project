@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+    justify-content: center;
 
     background-color: var(--bg-color);
     
@@ -28,16 +28,17 @@ body {
     justify-content: center;
 }
 
-section {
-    position: relative; 
+section { 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 .pict-container {
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center; 
 }
@@ -53,10 +54,25 @@ section {
 .kotak-tengah {
     background-color: rgb(229, 205, 200); /* var(--sec-color) with opacity */
     padding: 20px 50px;
+    
     border-radius: 20px;
+    border-style: solid;
+    border-color: var(--nav-color);
     
     height: fit-content;
+  
     
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.669);
+}
+
+.form-content {
+    margin-top: 10px;
+    width: 400px;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .form-text {
@@ -66,7 +82,13 @@ section {
     color: var(--txt-color);
     display: flex;
     align-items: center;
-    margin: 25px 10px;
+    flex-direction: column;
+}
+
+.form-text span {
+    padding-top: 5px;
+    font-size: 15px;
+    width: inherit;
 }
 
 .gender-form {
@@ -76,11 +98,10 @@ section {
     color: var(--txt-color);
     display: flex;
     align-items: center;
-    margin: 25px 10px;
+    margin: 0 10px;
 }
 
 .gender-form i {
-    position: relative;
     left: 15px;
     font-size: 24px; 
 }
@@ -95,7 +116,8 @@ section {
 .gender-option {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
     margin-left: 20px;
 }
 
@@ -140,6 +162,7 @@ section {
 .form-text i {
     position: absolute;
     left: 15px;
+    top: 15px;
     font-size: 24px; 
 }
 
@@ -155,8 +178,16 @@ section {
     outline: none;
 }
 
+.text-box.success {
+    border-color: green;
+}
+
+.text-box.error {
+    border-color: red;
+}
+
 .text-box:focus, .text-box:valid {
-    border-color: var(--nav-color);
+    border-color: inherit;
     transition: 0.3s ease;
 }
 
@@ -174,7 +205,7 @@ section {
 .form-text label {
     position: absolute;
     left: 50px;
-    top: 50%;
+    top: 26px;
     transform: translateY(-50%); /*ditengah vertikal*/
     padding: 0 5px;
     background-color: rgba(229, 205, 200, 0.7); /* match kotak-tengah */
@@ -224,7 +255,7 @@ a {
     display: flex;
 
 
-    margin: 15px 5px;
+    margin: 0 5px;
 }
 
 input[type="checkbox"] {
@@ -238,7 +269,7 @@ input[type="checkbox"] {
 
 .register-login-change {
     display: flex;
-    align-items: center;
+    justify-content: center;
     height: 40px;
 
     gap: 5px;
@@ -249,23 +280,48 @@ input[type="checkbox"] {
     text-decoration: underline;
 }
 
+.error {
+    color: red;
+}
+
+
+
 
 @media (max-width: 700px) {
     body {
-        padding: 30px;
+        max-width: 700px;
+        
     }
+
+    section {
+        margin: 0;
+        
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
     .kotak-tengah {
         padding: 10px 10px;
         border-radius: 10px;
         width: 95vw;
         max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-content {
+        padding: 0 40px;
+        max-width: 350px;
+        gap: 10px;
     }
     .title {
         font-size: 22px;
     }
     .form-text {
         font-size: 16px;
-        margin: 10px 0;
+
     }
     .gender-form {
         font-size: 16px;
@@ -289,20 +345,29 @@ input[type="checkbox"] {
     .form-text label {
         font-size: 12px;
         left: 40px;
-        padding: 0 3px;
+        padding: 0 5px 10px 0;
+    }
+    .form-text:hover label, .form-text:focus label, .form-text:valid label{
+        padding: 0 5px 0 0;
     }
     .form-text i {
         font-size: 18px;
         left: 10px;
+
     }
     .text-box {
         height: 40px;
         font-size: 14px;
-        border-radius: 10px;
         padding: 0 10px 0 35px;
     }
     #eye-icon {
         left: 80%;
         font-size: 18px;
     }
+
+    .register-login-change {
+        font-size: small;
+    }
+
+
 }

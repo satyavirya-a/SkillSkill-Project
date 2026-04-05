@@ -37,7 +37,7 @@
 
 
 .vision-container {
-    background-image: linear-gradient(to right,transparent 0%, var(--nav-color) 60%);
+    background-image: linear-gradient(to right,transparent 0%, var(--nav-color) 20%, var(--nav-color) 80%, transparent 100%);
     color: white;
     row-gap: 3rem;
 
@@ -91,6 +91,8 @@
     padding: 10px;
 
     text-align: center;
+
+    max-width: 500px;
 }
 
 .data {
@@ -291,6 +293,9 @@
 }
 
 @media (max-width: 1024px) and (min-width: 701px) {
+    .vision-container {
+         background-image: linear-gradient(to right,transparent 0%, var(--nav-color) 5%, var(--nav-color) 95%, transparent 100%);
+    }
     .journey-box {
         width: min(450px, calc(50vw - 60px));
     }
@@ -324,6 +329,7 @@
 
         padding: 40px 0;
         margin-left: 0;
+        background-color: var(--nav-color);
     }
 
     .vision-section .vision-container .image {

@@ -1,19 +1,29 @@
 
 // Untuk milih gender
 function radioValidadion() {
-    var gender = document.getElementsByName("gender");
-    var genValue = false;
+    const gender = document.getElementsByName("gender");
+    const genderError = document.querySelector(".gender-form .error");
+    let genValue = false;
 
-    for (var i =0; i < gender.length; i++) {
-        if (gender[i].ariaChecked == true) {
+    for (let i = 0; i < gender.length; i++) {
+        if (gender[i].checked === true) {
             genValue = true;
+            break;
         }
     }
 
     if (!genValue) {
-        alert("Please choose gender");
+        if (genderError) {
+            genderError.innerText = "Harus pilih salah satu opsi";
+        }
         return false;
     }
+
+    if (genderError) {
+        genderError.innerText = "";
+    }
+
+    return true;
 }
 
 
@@ -59,17 +69,172 @@ window.addEventListener('pageshow', function(event) {
   }
 });
 
+//validasi input form
+const form = document.getElementById('form');
+let nameInput = document.getElementById("name");
+let dobInput = document.getElementById("dob");
+let emailInput = document.getElementById("email");
+let termsInput = document.getElementById("terms");
 
-//Validasi Password dan Confirm Password
-// let confirmPasswordInput = document.getElementById("conf-pass");
-// console.log(confirmPasswordInput);
-// let registerBtn = document.getElementById("cofirmBtn");
-// registerBtn.onclick = function() {
-//     if (confirmPasswordInput != passwordInput) {
-//         alert("Confirm Password berbeda dengan password");
-//         // registerBtn.reload();
-//         return false;
-//     }
+const setError = (element, message) => {
+    const textBox = element.parentElement;
+    const errorDisplay = textBox.querySelector(".error");
 
-//     return true;
-// }
+    if (errorDisplay) {
+        errorDisplay.innerText = message;
+    }
+    element.classList.add("error");
+}
+
+const setSuccess = element => {
+    const textBox = element.parentElement;
+    const errorDisplay = textBox.querySelector(".error");
+
+    if (errorDisplay) {
+        errorDisplay.innerText = '';
+    }
+    // element.classList.add("success");
+    element.classList.remove("error");
+}
+
+
+function validateName() {
+    let name = nameInput.value.trim();
+
+    if (name.length === 0) {
+        setError(nameInput, "Name is required");
+        return false;
+    }
+
+    setSuccess(nameInput);
+    return true;
+}
+
+function validateDob() {
+    let dob = dobInput.value.trim();
+
+    if (dob.length === 0) {
+        setError(dobInput, "Date of Birth is required");
+        return false;
+    }
+
+    const dobDate = new Date(dob);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (Number.isNaN(dobDate.getTime()) || dobDate > today) {
+        setError(dobInput, "Date of Birth is not valid");
+        return false;
+    }
+
+    setSuccess(dobInput);
+    return true;
+}
+
+function validateEmail() {
+    let mail = emailInput.value.trim();
+
+    const posAtSymbolIdx = mail.indexOf('@'); //Harus ada @ dan gak boleh char pertama (idx != 0)
+    const lastPosDotIdx = mail.lastIndexOf('.'); //. terakhir tidak boleh di akhir email dan minimal 1 char lebih dari @
+    const spaceIdx = mail.indexOf(' '); // kaga boleh ada spasi
+
+    const isEmailValid =
+        posAtSymbolIdx > 0 &&
+        lastPosDotIdx > posAtSymbolIdx + 1 &&
+        lastPosDotIdx < (mail.length - 1) &&
+        spaceIdx === -1;
+
+    if (!isEmailValid) {
+            setError(emailInput, "Email Tidak Valid");
+            return false;
+    }
+
+    setSuccess(emailInput);
+    return true;
+
+}
+
+
+function validatePassword() {
+    let pass = passwordInput.value;
+    if (pass.length === 0) {
+        setError(passwordInput, "Password is required");
+        return false;
+    }
+
+    else if (pass.length < 8) {
+        setError(passwordInput, "Password must be at least 8 character.");
+        return false;
+    }
+
+    setSuccess(passwordInput);
+    return true;
+}
+
+function validateConfirmPassword() {
+    let confpass = confPasswordInput.value;
+    if (confpass.length === 0) {
+        setError(confPasswordInput, "Confirm Password is required");
+        return false;
+    }
+
+    else if (confpass !== passwordInput.value){
+        setError(confPasswordInput, "Confirm Password is different with Password");
+        return false;
+    }
+
+    setSuccess(confPasswordInput);
+    return true;
+}
+
+function validateTerms() {
+    let terms = termsInput.checked;
+
+    if (terms === false) {
+        setError(termsInput, "Please Read the Terms and Privacy Policy first");
+        return false;
+    }
+
+    setSuccess(termsInput);
+    return true;
+}
+
+
+nameInput.addEventListener("input", validateName);
+dobInput.addEventListener("input", validateDob);
+passwordInput.addEventListener("input", validatePassword);
+confPasswordInput.addEventListener("input", validateConfirmPassword);
+emailInput.addEventListener("input", validateEmail);
+passwordInput.addEventListener("input", () => {
+    if (confPasswordInput.value.length > 0) {
+        validateConfirmPassword();
+    }
+});
+termsInput.addEventListener("change", validateTerms);
+
+//validasi gender lagi untuk final validation sebelum di submit
+const genderInputs = document.getElementsByName("gender");
+for (let i = 0; i < genderInputs.length; i++) {
+    genderInputs[i].addEventListener("change", radioValidadion);
+}
+
+form.addEventListener("submit", e => {
+    const isNameValid = validateName();
+    const isGenderValid = radioValidadion();
+    const isDobValid = validateDob();
+    const isPassValid = validatePassword();
+    const isConfPassValid = validateConfirmPassword();
+    const isEmailValid = validateEmail();
+    const isTermsValid = validateTerms();
+
+    if (!isNameValid || !isGenderValid || !isDobValid || !isPassValid || !isConfPassValid || !isEmailValid || !isTermsValid) {
+        alert("Register Gagal");
+        e.preventDefault(); //seperti system pause
+        return;
+    }
+
+    e.preventDefault(); // biar tidak langsung menjalankan apa yanga ada di html 
+    window.location.href = "homepage.html";
+});
+
+
