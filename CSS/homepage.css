@@ -337,10 +337,15 @@
         font-size: 85px;
     }
 
+    .landing-section p {
+        width: 80%;
+    }
+
     .subtitle-landing {
         font-size: 35px;
         width: 50%;
     }
+
 
     .banner-section h2 {
         font-size: 35px;
@@ -376,12 +381,15 @@
     }
 
     .join-content {
-        padding: 0;
+        padding: 0 10px;
     }
 
     .join-content h2 {
         font-size: 30px;
-        
+    }
+
+    .join-content a {
+        margin-top: 5px;
     }
 
     .picture {
@@ -396,6 +404,7 @@
 @media (max-width: 700px) {
 
     .landing-section {
+        background-image: url(../Assets/landing-section-handphone.png);
         min-height: 50vh;
         padding: 45px 20px;
         transition: 0.3s ease;
@@ -408,13 +417,13 @@
 
     .subtitle-landing {
         font-size: 30px;
-        width: 60%;
+        width: 65%;
         transition: 0.3s ease;
     }
 
     .landing-section p{
         font-size: 15px;
-        width: 50%;
+        max-width: 65%;
     }
 
     .banner-section {
