@@ -426,6 +426,10 @@
         max-width: 65%;
     }
 
+    .LearnNow {
+        width: 35%;
+    }
+
     .banner-section {
         gap: 5px;
     }

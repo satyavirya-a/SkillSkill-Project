@@ -404,6 +404,19 @@
     }
 
 
+    .video:hover   ~ .decription, .video:focus ~ .decription, .decription:hover {
+        height: fit-content;
+        padding-bottom: 10px;
+        transition: 0.5s ease;
+
+        padding: 10px 0 0 10px;
+    }
+
+    .info {
+        margin-bottom: 10px;
+    }
+
+
     .banner {
         height: fit-content;
     }
@@ -421,10 +434,10 @@
     }
 }
 
-@media (max-width:320px ) {
+@media (max-width:370px ) {
     .heading-title {
         text-align: center;
-        font-size: 15px;
+        font-size: 18px;
     }
     .heading-content a h5{
         font-size: 10px;

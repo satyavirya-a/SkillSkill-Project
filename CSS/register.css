@@ -216,7 +216,7 @@ section {
     top: 26px;
     transform: translateY(-50%); /*ditengah vertikal*/
     padding: 0 5px;
-    background-color: rgba(229, 205, 200, 0.7); /* match kotak-tengah */
+    background-color: rgba(229, 205, 200, 0.0);
     transition: 0.3s ease;
     pointer-events: none; /*kalau label diklik, tembus ke input */
     color: var(--txt-color);
@@ -380,7 +380,7 @@ input[type="checkbox"] {
     }
 
     .register-login-change {
-        font-size: small;
+        font-size: 12px;
     }
 
 
