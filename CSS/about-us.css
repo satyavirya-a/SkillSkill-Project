@@ -324,6 +324,14 @@
 
 @media (max-width: 700px) {
 
+    .title-container .title{
+
+        
+        
+        font-size: 20px;
+
+    }
+
     .vision-container {
         flex-direction: column;
 
