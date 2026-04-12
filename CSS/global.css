@@ -372,7 +372,7 @@ nav .register-button:focus, .register-button:hover {
     }
 
     .footer-section {
-        height: fit-content;
+        height: 350px;
         padding: 20px;
         gap: 10px;
 
@@ -385,7 +385,7 @@ nav .register-button:focus, .register-button:hover {
         align-items: center;
         justify-content: flex-start;
 
-        height: 250px;
+        height: fit-content;
         gap: 10px;
 
 
@@ -417,7 +417,7 @@ nav .register-button:focus, .register-button:hover {
     }
 
     .copyright {
-        margin-top: 0;
+        margin-top: 20px;
     }
 
 

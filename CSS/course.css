@@ -404,10 +404,6 @@
     }
 
 
-    .decription h3, .decription h4, .decription p {
-        max-width: 350px;
-    }
-
     .banner {
         height: fit-content;
     }
@@ -422,6 +418,16 @@
         margin-left: 0;
 
         font-size: smaller;
+    }
+}
+
+@media (max-width:320px ) {
+    .heading-title {
+        text-align: center;
+        font-size: 15px;
+    }
+    .heading-content a h5{
+        font-size: 10px;
     }
 }
 

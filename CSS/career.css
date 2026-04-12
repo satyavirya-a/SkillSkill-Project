@@ -260,6 +260,9 @@
 .qna-container {
     max-width: 1000px;
     width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 
 .qna-container .qna-box {
@@ -347,7 +350,7 @@
 
 .qna-container button[aria-expanded="true"] + .qna-content {
     opacity: 1;
-    max-height: 9em;
+    max-height: 10em;
     transition: all 0.2s linear;
     will-change: opacity, max-height;
 }
@@ -363,7 +366,7 @@
 .qna-container .qna-content p {
     font-size: 1.1rem;
     font-weight: 400;
-    margin: 2em 0;
+    margin: 1em 0;
     padding-left: 40px;
 }
 
@@ -419,8 +422,17 @@
         text-align: left;
     }
 
+    .qna-section {
+        padding: 20px;
+        font-size: small;
+    }
+
     .qna-heading {
         text-align: center;
+    }
+
+    .qna-box button {
+        padding-right: 10px;
     }
 
 }
