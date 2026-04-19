@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
+
 }
 
 .heading-text h2 {
@@ -63,9 +64,10 @@
 
 .popular-container {
     width: 100%;
-    height: fit-content;
+    height: 410px;
     display: flex;
-    margin: 10px auto;
+    margin: 5px auto;
+    padding-top: 10px;
 
     overflow-x: auto;
 }
@@ -106,6 +108,10 @@
 
 }
 
+.popular-card:hover {
+    box-shadow: 1px 5px 5px 1px var(--nav-color);
+}
+
 .popular-card .job-title {
     margin: 0;
     min-height: 76px;
@@ -131,7 +137,7 @@
 
 
 .list-jobs-section {
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: 10px;
 
     max-width: 100%;
@@ -377,6 +383,10 @@
         flex-direction: column;
     }
 
+    .heading-text {
+        text-align: center;
+    }
+
     .heading-picture {
         width: 100%;
         height: auto;
@@ -410,7 +420,6 @@
     }
     .job-card {
         flex-direction: column;
-        width: fit-content;
         margin-right: 20px;
     }
 
@@ -425,6 +434,10 @@
     .qna-section {
         padding: 20px;
         font-size: small;
+    }
+
+    .qna-container {
+        max-width: 500px;
     }
 
 
