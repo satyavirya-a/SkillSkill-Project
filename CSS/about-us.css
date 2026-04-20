@@ -3,15 +3,21 @@
 .heading-container {
     background-color: white;
     background-image: url(../Assets/white-background.png);
-    height: 125px;
+    height: 150px;
 
     text-align: center;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap:0.5rem;
 
     font-size: 30px;
+}
+
+.heading-container span {
+    font-family: var(--title-font) ;
 }
 
 .title-section {
@@ -88,7 +94,7 @@
 .vision-desc {
     font-size: 20px;
     font-weight: 500;
-    padding: 10px;
+    padding-right: 40px;
 
     text-align: center;
 
@@ -324,6 +330,10 @@
 
 @media (max-width: 700px) {
 
+    .heading-container h5{
+        width: 80%;
+    }
+
     .title-container .title{
 
         
@@ -337,17 +347,27 @@
 
         padding: 40px 0;
         margin-left: 0;
-        background-color: var(--nav-color);
+        background-image: linear-gradient(to right,transparent 0%, var(--nav-color) 10%, var(--nav-color) 90%, transparent 100%);
     }
 
     .vision-section .vision-container .image {
         margin: 0;
     }
 
+    .vision-container .image img{
+        width: 250px;
+        height: auto;
+    }
+
     .vision-text {
         padding: 0;
 
         text-align: center;
+    }
+
+    .vision-desc {
+        padding-right: 0;
+        width: 75%;
     }
     .mission-section {
         justify-content: center;
@@ -409,6 +429,10 @@
 }
 
 @media (max-width: 320px ) {
+    .vision-container .image img{
+        width: 200px;
+        height: auto;
+    }
 
     .journey-box .title {
         height: 50px;
